@@ -1,4 +1,12 @@
-tsh
-===
+theteaclub
+==========
 
-Texas Secular Humanists
+Description
+-----------
+
+This is the website for Texas Secular Humanits at The University of Texas at Austin.
+
+Demo
+-----------------
+
+You can view it [here](http://yvescourtois.com/tsh/).
