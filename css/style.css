@@ -392,3 +392,9 @@ footer p {
 a i {
 	color:#8a8683;
 }
+
+footer input {
+	background-color: #888;
+	border:0;
+	margin-bottom:5px;
+}
