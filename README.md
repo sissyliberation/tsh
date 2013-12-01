@@ -1,10 +1,10 @@
-theteaclub
+tsh
 ==========
 
 Description
 -----------
 
-This is the website for Texas Secular Humanits at The University of Texas at Austin.
+This is the website for Texas Secular Humanists at The University of Texas at Austin.
 
 Demo
 -----------------
