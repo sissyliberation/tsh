@@ -7,7 +7,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
 	<title>Texas Secular Humanists</title>
-	<link href="images/favicon.ico" rel="shortucut icon" />
+	<link href="images/tsh.png" rel="shortucut icon" />
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
@@ -95,16 +95,32 @@
 				<h1>Contact</h1>
 
 				<div id="contact-area">
-			
-					<form method="post" action="contactengine.php">
-						<input type="text" placeholder="Name" name="Name" id="Name" />
+					
+					<form method="post" action="">
+						<input type="hidden" name="action" value="submit">
+						<input type="text" placeholder="Name" name="name" id="Name" />
 				
-						<input type="text" placeholder="Email" name="Email" id="Email" />
+						<input type="text" placeholder="Email" name="email" id="Email" />
 						
-						<textarea name="message" placeholder="Message" rows="20" cols="20" id="Message"></textarea>
+						<textarea name="message" placeholder="message" rows="20" cols="20" id="Message"></textarea>
 
 						<input type="submit" name="submit" value="Submit" class="submit-button" />
 					</form>
+
+					<?php 
+          	$action=$_REQUEST['action'];
+          	if($action != "") {
+          		$name=$_REQUEST['name']; 
+	            $email=$_REQUEST['email']; 
+	            $message=$_REQUEST['message'];
+
+	            if ($name!="" && $email!="" || $message!="") {
+	              $subject="TSH Website Contact";
+	              $from="From: $name<$email>\r\nReturn-path: $email";
+	              mail("courtois1337@gmail.com", $subject, $message, $from); 
+	            }
+          	}
+					?>
 
 				</div>
 			</div>
@@ -118,7 +134,6 @@
 				</p>
 				
 			</div>
-
 		</div>
 	</div>
 	<footer>
